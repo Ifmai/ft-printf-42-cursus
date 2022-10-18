@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 08:02:09 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/10/18 08:02:29 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/10/18 09:26:52 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ void	ft_print3(va_list arg, t_printfb *print)
 	if (print->format == 'p')
 	{
 		print->fconvert = TRUE;
+		print->fconlen = 2;
 		print->format += 8;
 		print->unsvalue = va_arg(arg, unsigned long);
 		print->hexlen = ft_hexa_x_len(print->unsvalue);
